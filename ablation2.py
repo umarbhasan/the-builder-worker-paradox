@@ -19,8 +19,6 @@ def calculate_keyword_density(texts, keywords):
         text_lower = text.lower()
         # Count total occurrences of keywords in the post
         count = sum(1 for word in keywords if word in text_lower)
-        # Normalize by length? Let's just do raw count per post for simplicity,
-        # or distinct presence (0 or 1). Let's do raw count.
         scores.append(count)
     return scores
 
